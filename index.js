@@ -462,9 +462,16 @@ const user = [
 app.get('/', (req, res) => {
     res.send('hello');
 })
+
+
 app.get('/user', (req, res) => {
     res.send(user);
 })
+
+app.post('/user', (req, res) => {
+    res.send(user);
+})
+
 
 app.listen(port, () => {
     console.log("server is running")
