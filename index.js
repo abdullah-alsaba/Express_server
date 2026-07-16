@@ -1,8 +1,14 @@
 const express = require('express')
 
+const cors = require('cors');
+
+app.use(cors());
+
 const app = express();
 
 const port = process.env.Port || 8000;
+
+
 
 const user = [
   {
@@ -469,7 +475,8 @@ app.get('/user', (req, res) => {
 })
 
 app.post('/user', (req, res) => {
-    res.send(user);
+    console.log("post method is working"); 
+    res.send({success:true, message:"post method is working"});
 })
 
 
